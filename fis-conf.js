@@ -1,5 +1,5 @@
 // 加 md5
-fis.match('*.{js,css}', {
+fis.match('*.{js,css,png,jpg,gif}', {
   useHash: true
 });
 
@@ -10,9 +10,9 @@ fis.match('*.js', {
 fis.match('*.css', {
   optimizer: fis.plugin('clean-css')
 });
-fis.match('*.png', {
-  optimizer: fis.plugin('png-compressor')
-});
+// fis.match('*.png', {
+//   optimizer: fis.plugin('png-compressor')
+// });
 
 // 资源定位
 fis.match('{images,css,js}/**', {
