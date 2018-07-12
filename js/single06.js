@@ -1,9 +1,9 @@
 /**
  * @file name    : single05.js
  * @created time : 2018-07-12
- * @author       : 
- * @email        : 
- * @github       : 
+ * @author       : rf.wangchn
+ * @email        : rf.wangchn@gmal.com
+ * @github       : https://github.com/smpower/
 */
 
 /*jslint         browser : true, continue : true,
