@@ -61,8 +61,6 @@ p.spec-para, span.spec-para {
 	font-size: 15px;
 }
 
-.main { padding-bottom: 34px; }
-
 .main-logo.image-center img { width: 22px; heigth: 25px; }
 
 .main-title {
@@ -337,10 +335,6 @@ hr.single-split { margin: 0; margin-top: 5px; }
 	border-top-style: dashed
 }
 
-.section13-comment {
-	padding-bottom: 30px
-}
-
 .section13-comment-item {
 	padding-bottom: 20px;
 	display: flex;
@@ -481,14 +475,12 @@ hr.single-split { margin: 0; margin-top: 5px; }
 
 /* Start: 复用页面底部 */
 footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
 	z-index: 3;
 	width: 100%;
 	height: 68px;
 	line-height: 68px;
 	background: #fff;
+	margin-bottom: 68px;
 }
 
 footer p {
@@ -523,3 +515,27 @@ footer p {
 	}
 }
 /* End: 复用页面底部 */
+
+/* Start: aside */
+aside {
+  width: 100%;
+  height: 68px;
+  background: #fd3232;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+aside p, aside span {
+  color: #fecb2e;
+  font-weight: bold;
+  font-size: 16px;
+}
+aside p {
+  margin-bottom: 0;
+}
+/* Edn: aside */
