@@ -447,3 +447,10 @@ aside p {
   margin-bottom: 0;
 }
 /* Edn: aside */
+
+/* Start: 商务通插件样式 */
+#LRfloater0 img {
+  width: 38px;
+  height: 97px;
+}
+/* End: 商务通插件样式 */
