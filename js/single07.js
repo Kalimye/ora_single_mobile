@@ -72,7 +72,7 @@ if (isIE || isIE11) {
 
 		if (deliveryItem.classList.contains('image-delivery-03')) {
 			deliveryItem.querySelector('img').onclick = () => {
-			  window.location.href = 'http://www.jvziqinggan.com/single/response/html/single01_01_swt.html';
+			  window.location.href = 'http://qing.welltui1.com/single/response/html/single01_01_copy.html';
 			};
 		}
 
