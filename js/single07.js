@@ -58,3 +58,28 @@ if (isIE || isIE11) {
 
 	xhr.send(null);
 })();
+
+// 图片传送门
+(function () {
+	const deliveries = document.querySelectorAll('.image-delivery-item');
+
+	deliveries.forEach((deliveryItem) => {
+		if (deliveryItem.classList.contains('image-delivery-02')) {
+			deliveryItem.querySelector('img').onclick = () => {
+			  window.location.href = './single06_01_copy.html';
+			};
+		}
+
+		if (deliveryItem.classList.contains('image-delivery-03')) {
+			deliveryItem.querySelector('img').onclick = () => {
+			  window.location.href = 'http://www.jvziqinggan.com/single/response/html/single01_01_swt.html';
+			};
+		}
+
+		if (deliveryItem.classList.contains('image-delivery-01')) {
+			deliveryItem.querySelector('img').onclick = () => {
+			  window.location.href = './single08_01_copy.html';
+			};
+		}
+	});
+})();
