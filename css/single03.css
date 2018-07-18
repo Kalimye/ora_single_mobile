@@ -489,21 +489,23 @@ span.main-title-text {
 */
 footer {
   width: 100%;
-  height: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url("../images/single03/footer.png") no-repeat center center;
-  background-size: 100% 1.2rem;
+  background: #ffae49;
+  padding: .15rem 0;
   position: fixed;
   bottom: 0;
-  left: 0;
-  z-index: 1;
+  left: 0
 }
-footer span {
-  display: inline-block;
-  width: 100%;
+
+footer p {
   font-size: .26rem;
-  color: #fff;
+  color: #fff
+}
+
+p.fuck-you {
+  font-size: .3rem;
+  color: #ffae49;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: .1rem;
+  margin-bottom: 1.2rem
 }
