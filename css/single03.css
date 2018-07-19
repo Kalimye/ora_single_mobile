@@ -489,16 +489,16 @@ span.main-title-text {
 */
 footer {
   width: 100%;
-  background: #ffae49;
+  background: #fff;
   padding: .15rem 0;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0
 }
 
 footer p {
-  font-size: .26rem;
-  color: #fff
+  font-size: .1rem;
+  color: #919191;
 }
 
 p.fuck-you {
