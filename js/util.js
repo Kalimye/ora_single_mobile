@@ -16,9 +16,9 @@
 
 (function (window, factofy) {
   factofy(window);
-}(this, function(window) {
+}(this, function (window) {
 
-  var Util = function(selector, options) {
+  var Util = function (selector, options) {
     if (!(this instanceof Util)) {
       return new Util(selector, options);
     }
@@ -37,7 +37,7 @@
   // 百度统计代码 - 落地页
   var baidu = function () {
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?2dfa9be8eb6f60c97fe98b06dd4532a1";
       var s = document.getElementsByTagName("script")[0];
@@ -53,7 +53,7 @@
    * @return {String}
    */
   Util.prototype = {
-    init: function() {},
+    init: function () { },
 
     /**
      * 合并参数
@@ -62,7 +62,7 @@
      * @param {obj} options - 自定义参数
      * @return {obj} obj - 自定义参数合并到（覆盖）默认参数
      */
-    extend: function(obj, options) {
+    extend: function (obj, options) {
       var key;
       for (key in options) { obj[key] = options[key]; }
       return obj;
@@ -74,12 +74,13 @@
      * @param {Array}
      * @return {String}
      */
-    randomWechat: function(arr) {
+    randomWechat: function (arr) {
       // 编写一个函数，该函数返回一个随机的微信公众号
       var arr_len = arr.length;
       var random_num = Math.floor(Math.random() * 10);
+      // 防止出现返回undefined
       while (random_num > arr_len - 1) {
-	random_num = Math.floor(Math.random() * 10);
+        random_num = Math.floor(Math.random() * 10);
       }
       return arr[random_num];
     }
