@@ -312,9 +312,7 @@ header hr {  /* 分割线 */
 */
 footer {
   width: 100%;
-  background: #fff;
   padding: .15rem 0;
-  /* position: fixed; */
   bottom: 0;
   left: 0;
 }
@@ -329,5 +327,5 @@ p.fuck-you {
   width: 90%;
   margin: 0 auto;
   padding-bottom: .1rem;
-  margin-bottom: 1.2rem;
+  /* margin-bottom: 1.2rem; */
 }
