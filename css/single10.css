@@ -118,6 +118,8 @@ p{
     color: #919191;
 }
 .section12-others .icon-thumb {
+    position: relative;
+    top: -1px;
     width: 15px;
     height: 15px;
     background: url("../images/single10/thumb-up.png") no-repeat center center;
@@ -297,7 +299,9 @@ hr.single-split {
     height: 16px;
     background: url("../images/single10/thumb-up.png") no-repeat center center;
     background-size: 100%;
-    margin-right: 5px
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
 }
 
 .section13-comment-item .content .reply .name .thumb .num {
