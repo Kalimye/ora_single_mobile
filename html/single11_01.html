@@ -87,7 +87,7 @@
 	</div>
 	<div class="test-wrap">
 		<div class="test-box">
-			<div class="swiper-container">
+			<div class="swiper-container swiper-no-swiping">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<h2 class="topic-number">剩6题</h2>
@@ -189,6 +189,12 @@
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
+			on: {
+				touchMove: function(event) {
+					console.log(event);
+					returnValue = true;
+				}
+			}
 		});
 		var look_result = document.querySelector(".look-result");
 		var test_result = document.querySelector(".test-result");
@@ -199,7 +205,6 @@
 			test_result.style.display = "block";
 		}
 	</script>
-	<script src="../js/single11.js"></script>
 </body>
 
 </html>
