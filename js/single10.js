@@ -35,24 +35,44 @@ if (isIE || isIE11) {
 		res, type, random_wechat
 	;
 
+	const toggleWechat = function(wechat) {  // 根据 pathname 切换微信号
+	  if (res[wechat]) {
+		wechatEles.forEach((item) => {
+		  item.textContent = res[wechat];
+		});
+	  }
+	  else {
+		console.log('配置文件 conf.json 有误，未找到 wechats 属性！');
+	  }
+	};
+
 	xhr.open('GET', '../conf.json');
 
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			type = xhr.getResponseHeader('Content-type');
+
 			if (type === 'application/json' || type === 'application/json; charset=UTF-8') {
 				res = JSON.parse(xhr.responseText);
 
-				if (res.wechat) {
-					wechatEles.forEach((item) => {
-					  item.textContent = res.wechat;
-					});
-				}
-				else {
-					console.log('配置文件 conf.json 有误，未找到 wechats 属性！');
-				}
+				let pathname = window.location.pathname;
+				const pathnameArr = pathname.split('/');
+				pathname = pathnameArr[pathnameArr.length - 1];
+				pathname = pathname.split('.')[0];
 
+				switch(pathname) {
+				  case 'single10_01_copy':
+				    toggleWechat('wechat10-copy');
+					break;
+				  case 'single10_01_swt':
+				  	toggleWechat('wechat10-swt');
+				  	break;
+				  default:
+				    toggleWechat('wechat');
+					break;
+				}
 			}
+
 		}
 	};
 
