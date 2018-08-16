@@ -94,9 +94,11 @@
 						<h3 class="topic-title">您的年龄是</h3>
 						<!-- Add Arrows -->
 						<div class="swiper-button-prev">上一题</div>
-						<ul class="swiper-button-next">
+						<ul class="swiper-button-next swiper-button-next-1">
 							<li>19岁以下</li>
 							<li>19-23岁</li>
+						</ul>
+						<ul class="swiper-button-next swiper-button-next-2">
 							<li>23-28岁</li>
 							<li>28岁以上</li>
 						</ul>
@@ -106,9 +108,11 @@
 						<h3 class="topic-title">TA在你心中的重要性占多少</h3>
 						<!-- Add Arrows -->
 						<div class="swiper-button-prev">上一题</div>
-						<ul class="swiper-button-next">
+						<ul class="swiper-button-next swiper-button-next-1">
 							<li>100%</li>
 							<li>80%</li>
+						</ul>
+						<ul class="swiper-button-next swiper-button-next-2">
 							<li>60%</li>
 							<li>40%以下</li>
 						</ul>
@@ -118,10 +122,13 @@
 						<h3 class="topic-title">你是否愿意为他付出和改变</h3>
 						<!-- Add Arrows -->
 						<div class="swiper-button-prev">上一题</div>
-						<ul class="swiper-button-next">
+						<ul class="swiper-button-next swiper-button-next-1">
 							<li>愿意</li>
 							<li>不一定</li>
+						</ul>
+						<ul class="swiper-button-next swiper-button-next-2">
 							<li>不愿意</li>
+							<li class="none">不愿意</li>
 						</ul>
 					</div>
 					<div class="swiper-slide">
@@ -129,9 +136,11 @@
 						<h3 class="topic-title">交往中你是否有以下错误</h3>
 						<!-- Add Arrows -->
 						<div class="swiper-button-prev">上一题</div>
-						<ul class="swiper-button-next">
+						<ul class="swiper-button-next swiper-button-next-1">
 							<li>经常赌博</li>
 							<li>婚外恋</li>
+						</ul>
+						<ul class="swiper-button-next swiper-button-next-2">
 							<li>多次背叛</li>
 							<li>都没有</li>
 						</ul>
@@ -141,9 +150,11 @@
 						<h3 class="topic-title">你们之间出了什么问题</h3>
 						<!-- Add Arrows -->
 						<div class="swiper-button-prev">上一题</div>
-						<ul class="swiper-button-next">
+						<ul class="swiper-button-next swiper-button-next-5-1">
 							<li>脾气不好经常吵架</li>
 							<li>敏感多疑不够信任</li>
+						</ul>
+						<ul class="swiper-button-next swiper-button-next-5-2">
 							<li>敏感多疑不够信任</li>
 							<li>其他原因</li>
 						</ul>
@@ -153,12 +164,14 @@
 						<h3 class="topic-title">你做过哪些挽回行为</h3>
 						<!-- Add Arrows -->
 						<div class="swiper-button-prev">上一题</div>
-						<ul class="swiper-button-next">
+						<ul class="swiper-button-next swiper-button-next-1">
 							<li>死缠烂打</li>
 							<li>自杀威胁</li>
+						</ul>
+						<ul class="swiper-button-next swiper-button-next-2">
 							<li>找过挽回机构</li>
 							<li>什么都没做</li>
-						</ul>
+						</ul>						
 					</div>
 					<div class="swiper-slide">
 						<h2 class="topic-number">完成</h2>
@@ -184,27 +197,20 @@
 		</div>
 	</div>
 	<script>
-	var swiper = new Swiper('.swiper-container', {
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	on: {
-		touchMove: function (event) {
-			console.log(event);
-			returnValue = true;
-		}
-	}
-});
-var look_result = document.querySelector(".look-result");
-var test_result = document.querySelector(".test-result");
-var swiper_container = document.querySelector(".swiper-container");
+		var swiper = new Swiper('.swiper-container', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
+		var look_result = document.querySelector(".look-result");
+		var test_result = document.querySelector(".test-result");
+		var swiper_container = document.querySelector(".swiper-container");
 
-look_result.onclick = function () {
-	swiper_container.style.display = "none";
-	test_result.style.display = "block";
-}
-	
+		look_result.onclick = function () {
+			swiper_container.style.display = "none";
+			test_result.style.display = "block";
+		}
 	</script>
 	<script src="../js/single11.js"></script>
 </body>
