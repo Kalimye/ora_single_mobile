@@ -59,11 +59,16 @@ if (isIE || isIE11) {
 				const pathnameArr = pathname.split('/');
 				pathname = pathnameArr[pathnameArr.length - 1];
 				pathname = pathname.split('.')[0];
+        
+        console.log(pathname);
 
 				switch(pathname) {
+          case 'single10_01':
+            toggleWechat('wechat10');
+            break;
 				  case 'single10_01_copy':
 				    toggleWechat('wechat10-copy');
-					break;
+					  break;
 				  case 'single10_01_swt':
 				  	toggleWechat('wechat10-swt');
 				  	break;
