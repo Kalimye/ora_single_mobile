@@ -36,13 +36,23 @@ if (isIE || isIE11) {
 	;
 
 	const toggleWechat = function(wechat) {  // 根据 pathname 切换微信号
+		if (res[wechat].length > 0) {
+			const util = new Util();
+			const wechatItem = util.randomWechat(res[wechat]);
+			wechatEles.forEach((item) => {
+			  // 随机显示一个微信号
+				item.textContent = wechatItem;
+			});
+			return;
+		}
 	  if (res[wechat]) {
-		wechatEles.forEach((item) => {
-		  item.textContent = res[wechat];
-		});
+			wechatEles.forEach((item) => {
+			  // 随机显示一个微信号
+				item.textContent = res[wechat];
+			});
 	  }
 	  else {
-		console.log('配置文件 conf.json 有误，未找到 wechats 属性！');
+			console.error('配置文件 conf.json 有误，未找到 wechats 属性！');
 	  }
 	};
 
@@ -60,8 +70,6 @@ if (isIE || isIE11) {
 				pathname = pathnameArr[pathnameArr.length - 1];
 				pathname = pathname.split('.')[0];
         
-        console.log(pathname);
-
 				switch(pathname) {
           case 'single10_01':
             toggleWechat('wechat10');
@@ -72,6 +80,9 @@ if (isIE || isIE11) {
 				  case 'single10_01_swt':
 				  	toggleWechat('wechat10-swt');
 				  	break;
+					case 'single10_01_cn':
+					  toggleWechat('wechats');
+						break;
 				  default:
 				    toggleWechat('wechat');
 					break;
