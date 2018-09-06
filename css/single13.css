@@ -118,7 +118,9 @@ img {
 
 /* 带背景块 */
 .first-block-bg {
-    padding: 50px 0;
+    /* padding: 50px 0; */
+    padding-top: 50px;
+    padding-bottom: 30px;
     background: url("../images/single13/first-bg.png") no-repeat center center;
     background-size: 100% 100%;
 }
@@ -165,6 +167,7 @@ img {
 /* 解决以下问题 */
 .tab-btn {
     padding: 0 16px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
 }
@@ -172,7 +175,9 @@ img {
 .tab-btn a {
     display: block;
     margin-right: 15px;
-    color: #313131;
+    padding: 4px 13px;
+    color: #313131;    
+    font-size: 14px;
     text-align: center;
     background: #fff;
 }
@@ -187,7 +192,31 @@ img {
 .tab-con {
     padding: 0 16px;
 }
-
+.tab-con ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: none;
+}
+.tab-con ul.active-con{
+    display: flex;
+}
+.tab-con ul li{
+    width: 33.33%;
+    padding: 6px 0;
+    text-align: center;
+    background: #e85e5e;
+}
+.tab-con ul li b{
+    color: #fff;
+    display: block;
+    font-size: 15px;
+}
+.tab-con ul li span{
+    color: #fff;
+    opacity: .6;
+    font-size: 13px;
+}
 .bg-in-btn span {
     height: 30px;
     line-height: 30px;
@@ -201,7 +230,9 @@ img {
     background-size: 18px 18px;
     border-radius: 20px;
 }
-
+.bg-in-btn.margin-t-35{
+    margin-top: 35px;
+}
 /* 也许你已经试过这些挽回方法 */
 .already-try-title .widget-title span::after {
     top: 20px;
