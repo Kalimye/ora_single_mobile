@@ -1,1 +1,0 @@
-var single=function(){var n,i,e={$container:null},a={};return n=function(){var n=e.$container;a={$container:n,$header:n.find("header"),$aside:n.find("aside"),$bitch:n.find(".bitch"),$bitch_close:n.find(".wechat-modal .modal-close-btn")}},i=function(i){e.$container=i,n()},{initModule:i}}();
