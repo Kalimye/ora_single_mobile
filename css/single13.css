@@ -1,0 +1,253 @@
+body {
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo-top {
+    padding: 13px;
+    overflow: hidden;
+}
+
+.logo-top .logo-img {
+    width: 114px;
+    height: 30px;
+}
+
+.logo-top .logo-img img {
+    width: 100%;
+    padding-top: 4px
+}
+
+.logo-top .top-right-text span {
+    color: #919191;
+    font-size: 12px;
+}
+
+.logo-top .top-right-text p {
+    color: #000000;
+    font-size: 12px;
+}
+
+.btn-style {
+    display: inline-block;
+    height: 22px;
+    color: #fff;
+    line-height: 22px;
+    font-size: 12px;
+    padding: 0 20px;
+    background: #e85e5e;
+    border-radius: 11px;
+}
+
+/* banner */
+.banner {
+    position: relative;
+    font-size: 0;
+}
+
+.banner .banner-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 36px;
+}
+
+/* 模块标题 */
+.widget-title {
+    text-align: center;
+    margin: 28px 0;
+}
+
+.widget-title span {
+    position: relative;
+    text-align: center;
+    color: #e85e5e;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.widget-title span::before {
+    position: absolute;
+    top: 2px;
+    left: -33px;
+    content: '';
+    width: 17px;
+    height: 19px;
+    background: url("../images/single13/widget-title-icon.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.widget-title span::after {
+    position: absolute;
+    top: 2px;
+    right: -33px;
+    content: '';
+    width: 17px;
+    height: 19px;
+    background: url("../images/single13/widget-title-icon.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/* 导航小图标 */
+.nav-icon-wrap .nav-icon-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-icon-list li {
+    width: 70px;
+    height: 68px;
+    margin: 0 9px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.nav-icon-list li img {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+}
+
+.nav-icon-list li p {
+    font-size: 14px;
+    color: #313131;
+    text-align: center;
+}
+
+/* 带背景块 */
+.first-block-bg {
+    /* padding: 50px 0; */
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: url("../images/single13/first-bg.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.first-block-bg .first-list-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.first-block-bg .first-list-wrap li img {
+    width: 43px;
+    height: 43px;
+    margin-right: 8px;
+}
+
+.first-block-bg .first-list-wrap li span {
+    color: #ff6666;
+    font-size: 14px;
+}
+
+.first-block-bg .first-list-wrap li {
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.first-block-bg .first-list-wrap li:first-child {
+    margin-right: 10px;
+}
+
+.first-block-bg .first-list-wrap li:last-child {
+    width: 130px;
+    margin-left: 10px;
+}
+
+.bg-in-btn {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 解决以下问题 */
+.tab-btn {
+    padding: 0 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-btn a {
+    display: block;
+    margin-right: 15px;
+    padding: 4px 13px;
+    color: #313131;    
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+}
+.tab-btn a:last-child{
+    margin-right: 0;
+}
+.tab-btn a.active{
+    color: #fff;
+    background: #e85e5e;
+}
+
+.tab-con {
+    padding: 0 16px;
+}
+.tab-con ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: none;
+}
+.tab-con ul.active-con{
+    display: flex;
+}
+.tab-con ul li{
+    width: 33.33%;
+    padding: 6px 0;
+    text-align: center;
+    background: #e85e5e;
+}
+.tab-con ul li b{
+    color: #fff;
+    display: block;
+    font-size: 15px;
+}
+.tab-con ul li span{
+    color: #fff;
+    opacity: .6;
+    font-size: 13px;
+}
+.bg-in-btn span {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    padding: 0 40px 0 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    background: url("../images/single13/to-right.png") no-repeat center right 16px;
+    background-color: #e85e5e;
+    background-size: 18px 18px;
+    border-radius: 20px;
+}
+.bg-in-btn.margin-t-35{
+    margin-top: 35px;
+}
+/* 也许你已经试过这些挽回方法 */
+.already-try-title .widget-title span::after {
+    top: 20px;
+}
+
+.already-try-title .widget-title span::before {
+    top: 20px;
+}
+
+.already-try-title .widget-title {
+    margin-bottom: 10px;
+}
+
+.already-try-title p {
+    color: #e85e5e;
+    font-size: 14px;
+    text-align: center;
+}
