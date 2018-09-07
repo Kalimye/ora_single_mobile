@@ -2,9 +2,14 @@
   "wechats": [
     "whgq332", "whds3685"
   ],
-	"wechat": "tyl6888",
-	"wechat09": "asw732",
-	"wechat10": "inf6888",
-	"wechat10-copy": "whds3685",
-	"wechat10-swt": "cmb5589"
+  "wechat": "tyl6888",
+  "wechat09": "asw732",
+  "wechat10": "whds3685",
+  "wechat10-copy": ["noth5789"],
+  "wechat10-swt": [
+    "qgzj3989",
+    "qgzj3989"	
+  ],
+  "wechat11_01":"qdem6246",
+  "wechat12_01":"qdem6246"
 }
