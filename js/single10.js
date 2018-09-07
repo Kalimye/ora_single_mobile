@@ -30,92 +30,91 @@ if (isIE || isIE11) {
 // 调用 util.randomWechat() 方法，传入包含若干微信号的数组，将随机返回
 // 一个微信号
 (function () {
-	var wechatEles = document.querySelectorAll('.wechat'),
-		xhr = new XMLHttpRequest(),
-		res, type, random_wechat
-	;
+  var wechatEles = document.querySelectorAll('.wechat'),
+      xhr = new XMLHttpRequest(),
+      res, type, random_wechat
+  ;
 
-	const toggleWechat = function(wechat) {  // 根据 pathname 切换微信号
-		if (res[wechat].length > 0) {
-			const util = new Util();
-			const wechatItem = util.randomWechat(res[wechat]);
-			wechatEles.forEach((item) => {
-			  // 随机显示一个微信号
-				item.textContent = wechatItem;
-			});
-			return;
-		}
-	  if (res[wechat]) {
-			wechatEles.forEach((item) => {
-			  // 随机显示一个微信号
-				item.textContent = res[wechat];
-			});
-	  }
-	  else {
-			console.error('配置文件 conf.json 有误，未找到 wechats 属性！');
-	  }
-	};
+  const toggleWechat = function(wechat) {  // 根据 pathname 切换微信号
+    if (res[wechat].length > 0) {
+      const util = new Util();
+      const wechatItem = util.randomWechat(res[wechat]);
+      wechatEles.forEach((item) => {
+	// 随机显示一个微信号
+	item.textContent = wechatItem;
+      });
+      return;
+    }
+    if (res[wechat]) {
+      wechatEles.forEach((item) => {
+	// 随机显示一个微信号
+	item.textContent = res[wechat];
+      });
+    }
+    else {
+      console.error('配置文件 conf.json 有误，未找到 wechats 属性！');
+    }
+  };
 
-	xhr.open('GET', '../conf.json');
+  xhr.open('GET', '../conf.json');
 
-	xhr.onreadystatechange = function () {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			type = xhr.getResponseHeader('Content-type');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      type = xhr.getResponseHeader('Content-type');
 
-			if (type === 'application/json' || type === 'application/json; charset=UTF-8') {
-				res = JSON.parse(xhr.responseText);
+      if (type === 'application/json' || type === 'application/json; charset=UTF-8') {
+	res = JSON.parse(xhr.responseText);
 
-				let pathname = window.location.pathname;
-				const pathnameArr = pathname.split('/');
-				pathname = pathnameArr[pathnameArr.length - 1];
-				pathname = pathname.split('.')[0];
-        
-				switch(pathname) {
-          case 'single10_01':
-            toggleWechat('wechat10');
-            break;
-				  case 'single10_01_copy':
-				    toggleWechat('wechat10-copy');
-					  break;
-				  case 'single10_01_swt':
-				  	toggleWechat('wechat10-swt');
-				  	break;
-					case 'single10_01_cn':
-					  toggleWechat('wechats');
-						break;
-				  default:
-				    toggleWechat('wechat');
-					break;
-				}
-			}
+	let pathname = window.location.pathname;
+	const pathnameArr = pathname.split('/');
+	pathname = pathnameArr[pathnameArr.length - 1];
+	pathname = pathname.split('.')[0];
 
-		}
-	};
+	switch(pathname) {
+	  case 'single10_01':
+	    toggleWechat('wechat10');
+	    break;
+	  case 'single10_01_copy':
+	    toggleWechat('wechat10-copy');
+	    break;
+	  case 'single10_01_swt':
+	    toggleWechat('wechat10-swt');
+	    break;
+	  case 'single10_01_cn':
+	    toggleWechat('wechats');
+	    break;
+	  default:
+	    toggleWechat('wechat');
+	    break;
+	}
+      }
+    }
+  };
 
-	xhr.send(null);
+  xhr.send(null);
 })();
 
 // 图片传送门
 (function () {
-	const deliveries = document.querySelectorAll('.image-delivery-item');
+  const deliveries = document.querySelectorAll('.image-delivery-item');
 
-	deliveries.forEach((deliveryItem) => {
-		if (deliveryItem.classList.contains('image-delivery-02')) {
-			deliveryItem.querySelector('img').onclick = () => {
-			  window.location.href = './single07_01_copy.html';
-			};
-		}
+  deliveries.forEach((deliveryItem) => {
+    if (deliveryItem.classList.contains('image-delivery-02')) {
+      deliveryItem.querySelector('img').onclick = () => {
+	window.location.href = './single07_01_copy.html';
+      };
+    }
 
-		if (deliveryItem.classList.contains('image-delivery-01')) {
-			deliveryItem.querySelector('img').onclick = () => {
-			  window.location.href = './single01_01_copy.html';
-			};
-		}
+    if (deliveryItem.classList.contains('image-delivery-01')) {
+      deliveryItem.querySelector('img').onclick = () => {
+	window.location.href = './single01_01_copy.html';
+      };
+    }
 
-		if (deliveryItem.classList.contains('image-delivery-03')) {
-			deliveryItem.querySelector('img').onclick = () => {
-			  window.location.href = 'http://qing.welltui1.com/single/response/html/single01_01_copy.html';
-			};
-		}
-	});
+    if (deliveryItem.classList.contains('image-delivery-03')) {
+      deliveryItem.querySelector('img').onclick = () => {
+	window.location.href = 'http://qing.welltui1.com/single/response/html/single01_01_copy.html';
+      };
+    }
+  });
 })();
