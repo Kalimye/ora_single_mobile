@@ -603,3 +603,6 @@ aside p, aside span {
     font-weight: 700;
     font-size: 16px;
 }
+
+/* 商务通样式调整 */
+#LRfloater0 img {width: 34px;}
